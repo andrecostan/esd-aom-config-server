@@ -1,0 +1,16 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: esd-aom-config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/andrecostan/esd-aom-config-repo
+          default-label: main
+          search-paths:
+            - 'esd-aom-gateway*'
+            - 'esd-aom-service-discovery*'
